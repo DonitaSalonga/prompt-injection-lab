@@ -286,7 +286,7 @@
     </div>
 
     <!-- Bottom composer -->
-    <div class="shrink-0 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 py-3">
+    <div id="composerArea" class="shrink-0 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 py-3">
       <div class="mx-auto w-full max-w-3xl">
 
         <!-- Error banner -->
@@ -301,10 +301,10 @@
         </div>
 
         <!-- Composer row: [Attack block | Chatbox] side by side, bottom-aligned -->
-        <div class="flex items-end gap-2.5">
+        <div id="composerRow" class="flex items-end gap-2.5">
 
           <!-- Left: Attack button with label below -->
-          <div class="flex flex-col items-center gap-1 shrink-0">
+          <div id="attackBlock" class="flex flex-col items-center gap-1 shrink-0">
             <button id="attackBtn"
               title="Pre-fill the direct prompt injection attack message"
               class="flex items-center gap-1.5 px-3 py-2 rounded-xl
@@ -321,7 +321,7 @@
               </svg>
               Attack
             </button>
-            <span class="text-[11px] font-bold uppercase tracking-wide text-red-400 dark:text-red-500 whitespace-nowrap">⚡ Direct Injection Attack</span>
+            <span id="attackLabel" class="text-[11px] font-bold uppercase tracking-wide text-red-400 dark:text-red-500 whitespace-nowrap">⚡ Direct Injection Attack</span>
           </div>
 
           <!-- Right: Composer box fills remaining width -->
