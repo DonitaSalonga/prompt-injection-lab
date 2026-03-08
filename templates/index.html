@@ -138,28 +138,30 @@
             </p>
           </div>
 
-          <!-- Injection tip card — copy button overlaid top-right -->
-          <div class="w-full max-w-md rounded-2xl border border-amber-200 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-950/20 px-4 py-3 text-left relative">
-            <!-- Copy button: absolute top-right corner -->
-            <button id="copyWelcomeInjection"
-              title="Copy injection line"
-              class="absolute top-2.5 right-2.5
-                     flex items-center gap-1 px-2 py-1 rounded-lg
-                     border border-amber-300 dark:border-amber-700/60
-                     bg-amber-100 dark:bg-amber-900/30
-                     text-amber-700 dark:text-amber-300
-                     text-[10px] font-semibold
-                     hover:bg-amber-200 dark:hover:bg-amber-800/40
-                     transition-colors duration-150">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-              </svg>
-              <span id="copyWelcomeTxt">Copy</span>
-            </button>
+          <!-- Injection tip card -->
+          <div id="welcomeInjCard" class="w-full max-w-md rounded-2xl border border-amber-200 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-950/20 px-4 py-3 text-left">
 
-            <p class="text-xs font-bold uppercase tracking-wide text-amber-600 dark:text-amber-400 mb-1.5 pr-16">
-              💡 Indirect Injection Guide
-            </p>
+            <!-- Header row: title + copy button in normal flow (never clipped) -->
+            <div class="flex items-center justify-between mb-1.5">
+              <p class="text-xs font-bold uppercase tracking-wide text-amber-600 dark:text-amber-400">
+                💡 Indirect Injection Guide
+              </p>
+              <button id="copyWelcomeInjection"
+                title="Copy injection line"
+                class="flex items-center gap-1 px-2 py-1 rounded-lg
+                       border border-amber-300 dark:border-amber-700/60
+                       bg-amber-100 dark:bg-amber-900/30
+                       text-amber-700 dark:text-amber-300
+                       text-[10px] font-semibold shrink-0
+                       hover:bg-amber-200 dark:hover:bg-amber-800/40
+                       transition-colors duration-150">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                </svg>
+                <span id="copyWelcomeTxt">Copy</span>
+              </button>
+            </div>
+
             <p class="text-xs text-amber-700 dark:text-amber-300 leading-relaxed">
               Open <button class="underline font-semibold hover:text-amber-900 dark:hover:text-amber-200 transition-colors open-panel-hint">Lab Inputs</button>,
               paste this line anywhere inside the customer ticket, then ask any question in <strong>Vulnerable</strong> mode:

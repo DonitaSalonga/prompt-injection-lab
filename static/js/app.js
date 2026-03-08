@@ -233,9 +233,15 @@ Alex Johnson
   labPanelToggle && labPanelToggle.addEventListener('click', togglePanel);
   openPanelHint  && openPanelHint.addEventListener('click', () => setPanelOpen(true));
 
-  // Always open by default; respect user's manual close only
+  // On mobile, always start with panel closed to avoid blocking the chat area.
+  // On desktop, restore the user's last preference (default: open).
   const savedPanel = localStorage.getItem('pil-panel');
-  setPanelOpen(savedPanel !== '0'); // null (first visit) → open; '0' (user closed) → closed
+  const isMobile   = window.innerWidth <= 768;
+  if (isMobile) {
+    setPanelOpen(false);                  // always closed on first mobile load
+  } else {
+    setPanelOpen(savedPanel !== '0');     // null (first visit) → open; '0' → closed
+  }
 
   /* ─────────────────────────────────────────────────────────────
      INJECTION MARKER DETECTION
