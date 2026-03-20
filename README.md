@@ -8,7 +8,7 @@ An educational web application for learning about prompt injection attacks in a 
 
 ## Live Demo
 
-🔗 [https://promptinjectiondemo.vercel.app](https://promptinjectiondemo.vercel.app)
+🔗 [https://promptinjectionlab.vercel.app](https://promptinjectionlab.vercel.app)
 
 ---
 
